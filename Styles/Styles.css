@@ -1,0 +1,49 @@
+
+        
+
+body {
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: rgb(27, 18, 18);
+    color: white;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.content-section {
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.btn-animate {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-animate:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+
+.navbar-nav .nav-link {
+    animation: fadeInOut 0.5s ease;}
