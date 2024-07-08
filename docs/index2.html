@@ -1,85 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sport Arena</title>
+    <title>Футбол</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-x7SNQ9BjRQuB/nNm6AdnpvibKPw+NKTv0ynd9kUjPMwKcFq8kNp9VtEadHja4frQ2HfrM77OPV/9/hPzxNYFbA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            font-family: 'Copperplate', 'Papyrus', fantasy;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body.light-mode {
             background-color: white;
             color: black;
         }
 
+        body.dark-mode {
+            background-color: rgb(27, 18, 18);
+            color: white;
+        }
+
         .navbar {
             margin-bottom: 20px;
+            padding: 20px;
+            background-color: red;
+            font-family: 'Arial', sans-serif;
         }
 
-        .jumbotron {
-            background-color: #f8f9fa;
-            padding: 2rem 1rem;
-            border-radius: 5px;
-        }
-
+        .navbar-brand,
+        .navbar-nav .nav-link,
         .btn-animate {
-            transition: background-color 0.3s ease, color 0.3s ease;
+            font-size: 1.2rem;
         }
 
-        .btn-animate:hover {
-            background-color: #555;
-            color: #fff;
+        .content-section {
+            margin: 20px 0;
+        }
+
+        .card img {
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .footer {
+            background-color: red;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">MyPage</a>
+<body class="light-mode">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><i class="fas fa-futbol"></i> СпортАрена</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Начало</a>
+                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"><i class="fas fa-futbol"></i> Футбол <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                    <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> За нас</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Контакт</a>
                 </li>
             </ul>
-        <button type="button" class="btn btn-light btn-animate" id="toggleDarkMode">
-            <i class="fas fa-moon"></i> Dark Mode
-        </button>
+        </div>
+        <button type="button" class="btn btn-dark btn-animate" id="toggleDarkMode"><i class="fas fa-adjust"></i> Тъмен режим</button>
     </nav>
 
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Welcome to Sport Arena</h1>
-            <p class="lead">Your ultimate source for sports news and updates.</p>
-            <hr class="my-4">
-            <p>We cover all major sports events, leagues, and athletes around the globe.</p>
+        <div class="content-section text-center">
+            <h1 style="color:rgb(255, 8, 0)">Футбол</h1>
+            <p>Добре дошли на страницата за футбол. Тук ще намерите най-новите новини и информация за света на футбола.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://example.com/image1.jpg" class="card-img-top" alt="Футболист">
+                    <div class="card-body">
+                        <h5 class="card-title">Новини за футбол</h5>
+                        <p class="card-text">Последни новини и актуализации за футболни събития, мачове и играчи.</p>
+                        <a href="#" class="btn btn-primary">Прочети още</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://example.com/image2.jpg" class="card-img-top" alt="Футболен мач">
+                    <div class="card-body">
+                        <h5 class="card-title">Резултати на живо</h5>
+                        <p class="card-text">Следете резултатите на живо от най-големите футболни лиги и турнири.</p>
+                        <a href="#" class="btn btn-primary">Прочети още</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://example.com/image3.jpg" class="card-img-top" alt="Футболна топка">
+                    <div class="card-body">
+                        <h5 class="card-title">История на футбола</h5>
+                        <p class="card-text">Научете повече за историята и развитието на футбола през годините.</p>
+                        <a href="#" class="btn btn-primary">Прочети още</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="gameArea" class="mt-4">
+            <h2>Футболна игра</h2>
+            <div id="ball"></div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha384-pzjw8f+T1QC5FqMG8n8f4erJ9f/HAJihLhL6R1vvMfQQEvD1GB8k/6H/1cuOz12C"
-        crossorigin="anonymous"></script>
+    <footer class="footer">
+        <p>&copy; 2024 СпортАрена. Всички права запазени.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.getElementById('toggleDarkMode').addEventListener('click', function () {
+        document.getElementById('toggleDarkMode').addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
             if (document.body.classList.contains('dark-mode')) {
-                this.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+                this.innerHTML = '<i class="fas fa-sun"></i> Светъл режим';
             } else {
-                this.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+                this.innerHTML = '<i class="fas fa-moon"></i> Тъмен режим';
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            const ball = document.getElementById('ball');
+            const gameArea = document.getElementById('gameArea');
+            const step = 10;
+            let ballTop = parseInt(ball.style.top) || 0;
+            let ballLeft = parseInt(ball.style.left) || 0;
+
+            switch (event.key) {
+                case 'ArrowUp':
+                    if (ballTop > 0) {
+                        ball.style.top = (ballTop - step) + 'px';
+                    }
+                    break;
+                case 'ArrowDown':
+                    if (ballTop < (gameArea.clientHeight - ball.clientHeight)) {
+                        ball.style.top = (ballTop + step) + 'px';
+                    }
+                    break;
+                case 'ArrowLeft':
+                    if (ballLeft > 0) {
+                        ball.style.left = (ballLeft - step) + 'px';
+                    }
+                    break;
+                case 'ArrowRight':
+                    if (ballLeft < (gameArea.clientWidth - ball.clientWidth)) {
+                        ball.style.left = (ballLeft + step) + 'px';
+                    }
+                    break;
             }
         });
     </script>

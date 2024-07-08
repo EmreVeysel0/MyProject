@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="bg" data-bs-theme="dark">
 
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>За нас</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             font-family: Copperplate, Papyrus, fantasy;
         }
-        
+
         body.light-mode {
             background-color: white;
             color: black;
         }
-        
+
         body.dark-mode {
             background-color: rgb(27, 18, 18);
             color: white;
         }
-        
+
         .navbar {
             margin-bottom: 20px;
+            padding: 20px;
+            background-color: red;
         }
 
         .content-section {
@@ -32,56 +35,47 @@
         }
 
         .btn-animate {
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
         }
 
         .btn-animate:hover {
             background-color: #555;
             color: #fff;
+            transform: scale(1.1);
         }
-        @keyframes fadeInOut {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px); 
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); 
-    }
-}
 
-
-.navbar-nav .nav-link {
-    animation: fadeInOut 0.5s ease;}
-        
+        .btn-animate i {
+            margin-right: 5px;
+        }
     </style>
 </head>
 
 <body class="light-mode">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">MyPage</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><i class="fas fa-futbol"></i> СпортАрена</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Начало</a>
+                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> За нас <span class="sr-only">(текущ)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Контакт</a>
                 </li>
             </ul>
-        <button type="button" class="btn btn-dark btn-animate" id="toggleDarkMode">Dark Mode</button>
+        </div>
+        <button type="button" class="btn btn-dark btn-animate" id="toggleDarkMode"><i class="fas fa-adjust"></i> Тъмен режим</button>
     </nav>
 
     <div class="container">
         <div id="about" class="content-section">
-            <h2>About Us</h2>
-            <p>Welcome to Sport Arena! We provide the latest sports news and updates.</p>
+            <h2>За нас</h2>
+            <p>Добре дошли в СпортАрена! Ние предоставяме най-новите спортни новини и актуализации.</p>
         </div>
     </div>
 
@@ -92,9 +86,9 @@
         document.getElementById('toggleDarkMode').addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
             if (document.body.classList.contains('dark-mode')) {
-                this.textContent = 'Light Mode';
+                this.innerHTML = '<i class="fas fa-sun"></i> Светъл режим';
             } else {
-                this.textContent = 'Dark Mode';
+                this.innerHTML = '<i class="fas fa-moon"></i> Тъмен режим';
             }
         });
     </script>

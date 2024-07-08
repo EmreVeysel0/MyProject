@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="bg" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyPage</title>
+    <title>Моята страница</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        
-
         body {
             font-family: Copperplate, Papyrus, fantasy;
         }
-        
+
         body.light-mode {
             background-color: white;
             color: black;
         }
-        
+
         body.dark-mode {
             background-color: rgb(27, 18, 18);
             color: white;
         }
-        
+
         .navbar {
             margin-bottom: 20px;
+            padding: 20px;
+            background-color: red;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link,
+        .btn-animate {
+            font-size: 1.2rem;
         }
 
         .content-section {
@@ -36,65 +40,88 @@
         }
 
         .btn-animate {
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
         }
 
         .btn-animate:hover {
             background-color: #555;
             color: #fff;
+            transform: scale(1.1);
         }
-        @keyframes fadeInOut {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px); 
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); 
-    }
-}
 
+        .btn-animate i {
+            margin-right: 5px;
+        }
 
-.navbar-nav .nav-link {
-    animation: fadeInOut 0.5s ease;}
-        
+        .sports-section img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .sports-section h3 {
+            margin-top: 20px;
+        }
+
+        .sport-button {
+            margin-bottom: 20px;
+            width: 100%;
+        }
     </style>
 </head>
 
 <body class="light-mode">
-   
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">MyPage</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><i class="fas fa-futbol"></i> СпортАрена</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav mr-auto"></ul>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"><i class="fas fa-home"></i> Начало <span class="sr-only">(текущо)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                    <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> За нас</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-                </li>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-dark btn-animate" id="toggleDarkMode">
-                        <i class="fas fa-moon"></i> Dark Mode
-                    </button>
+                    <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Контакт</a>
                 </li>
             </ul>
         </div>
+        <button type="button" class="btn btn-dark btn-animate" id="toggleDarkMode"><i class="fas fa-adjust"></i> Тъмен режим</button>
     </nav>
-    
 
     <div class="container">
         <div class="content-section text-center">
-            <h1 style="color:rgb(255, 8, 0)">Sport Arena</h1>
-            <p></p>
+            <h1 style="color:rgb(255, 8, 0)">СпортАрена</h1>
+            <p>Начална страница</p>
+        </div>
+
+        <div class="content-section sports-section">
+            <h2>Популярни спортове</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="https://cdn.leonardo.ai/users/7c248586-0cf3-431c-a5c7-e7cc389ae85c/generations/866265a6-6709-4ca4-a7e8-ef267b776daa/Default_football_0.jpg" alt="Футбол">
+                    <a href="football.html" class="btn btn-primary btn-animate sport-button"><i class="fas fa-futbol"></i> Футбол</a>
+                    <p>Футболът е най-популярният спорт в света, известен като сокър в някои страни.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://cdn.leonardo.ai/users/7c248586-0cf3-431c-a5c7-e7cc389ae85c/generations/e136bd23-8920-4e42-8676-fd6bcbb36c46/Default_Create_a_digital_artwork_of_a_basketball_player_in_act_2.jpg" alt="Баскетбол">
+                    <a href="basketball.html" class="btn btn-warning btn-animate sport-button"><i class="fas fa-basketball-ball"></i> Баскетбол</a>
+                    <p>Баскетболът е бърза игра, играна между два отбора. Популярен е по целия свят.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://cdn.leonardo.ai/users/7c248586-0cf3-431c-a5c7-e7cc389ae85c/generations/9b77b2d1-b665-4b15-9d8e-359ba7f9337e/Default_Creating_a_vibrant_and_energetic_tennis_match_scene_wi_2.jpg" alt="Тенис">
+                    <a href="tennis.html" class="btn btn-success btn-animate sport-button"><i class="fas fa-table-tennis"></i> Тенис</a>
+                    <p>Тенисът е спорт с ракета, който може да се играе индивидуално срещу един противник или между два отбора от по двама играчи.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://cdn.leonardo.ai/users/7a2545c7-71b1-4ef5-b8fc-2526a556d585/generations/d7330403-5c93-4674-992a-7774c48b0c40/Default_Create_a_stunning_image_of_a_volleyball_in_a_gym_captu_3.jpg" alt="Волейбол">
+                    <a href="volleyball.html" class="btn btn-danger btn-animate sport-button"><i class="fas fa-volleyball-ball"></i> Волейбол</a>
+                    <p>Волейболът е отборен спорт, в който два отбора от по шестима играчи са разделени от мрежа. Всеки отбор се опитва да отбележи точки, като приземява топката на полето на другия отбор.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -105,11 +132,12 @@
         document.getElementById('toggleDarkMode').addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
             if (document.body.classList.contains('dark-mode')) {
-                this.textContent = 'Light Mode';
+                this.innerHTML = '<i class="fas fa-sun"></i> Светъл режим';
             } else {
-                this.textContent = 'Dark Mode';
+                this.innerHTML = '<i class="fas fa-moon"></i> Тъмен режим';
             }
         });
     </script>
 </body>
+
 </html>
